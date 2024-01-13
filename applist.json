@@ -1,0 +1,25 @@
+{
+    "apps":[
+        {
+            "name":"CKAN",
+            "description":"CKAN is a metadata repository and associated tools to allow you to find, install, and manage mods for Kerbal Space Program. It provides strong assurances that mods are installed in the way prescribed by their metadata files, for the correct version of Kerbal Space Program, alongside their dependencies, and without any conflicting mods.",
+            "tags":["ckan","mod","mods","modding","install","installer","modder"],
+            "img":"https://avatars.githubusercontent.com/u/9023970",
+            "links":[{"name":"Github","src":"https://github.com/KSP-CKAN/CKAN"},{"name":"Download","src":"https://github.com/KSP-CKAN/CKAN/releases/latest"},{"name":"Forums","src":"https://forum.kerbalspaceprogram.com/topic/197082-ckan-the-comprehensive-kerbal-archive-network-v1332-laplace-ksp-2-support/"}]
+        },
+        {
+            "name":"Tech Tree Editor",
+            "description":"The tech tree editor, allows you to create tech trees",
+            "tags":["mod","mods","modding","modder","tree","tech","techtree","pm","patch","manager","ttm"],
+            "img":"https://spacedock.info/content/ShadowDev_103785/Tech_Tree_Manager/thumb_Tech_Tree_Manager-1703324119.jpg",
+            "links":[{"name":"The Editor","src":"https://ttm.kerbal.wiki"},{"name":"Forums","src":"https://forum.kerbalspaceprogram.com/topic/222283-tech-tree-manager-editor/"}]
+        },
+        {
+            "name":"Discord",
+            "description":"Main KSP2 discords",
+            "tags":["mod","mods","modding","modder","discord","official"],
+            "img":"https://cdn.discordapp.com/splashes/1078696971088433153/233a516a27038fd2a51d9657165dd39f.jpg?size=480",
+            "links":[{"name":"Intercept Games","src":"https://discord.gg/interceptgames"},{"name":"Modding Society","src":"https://discord.gg/ErStbyazSS"}]
+        }
+    ]
+}
