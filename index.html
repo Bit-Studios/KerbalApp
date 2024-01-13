@@ -18,6 +18,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             margin: 0px;
             padding: 0px;
         }
+
         .navbar {
             position: sticky;
             left: 0px;
@@ -26,6 +27,50 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         }
     </style>
     <script type="module">
+        globalThis.appsList = [{
+            "name":"example",
+            "description":"example",
+            "tags":["example"],
+            "img":"https://static.hillarys.co.uk/asset/media/9635/pure-white.jpg?width=1000&height=1000",
+            "links":[{"name":"example","src":"https://example.com"}]
+        }]
+        function ProcessData(){
+            globalThis.appsList.forEach(app =>{
+                var Buttons = ""
+                app.links.forEach(link =>{
+                    Buttons = `${Buttons} <a href="${link.src}" type="button" class="btn btn-outline-success">${link.name}</a>`
+                })
+                
+                `<div class="card mb-3" style="max-width: 100%;">
+            <div class="row g-0">
+                <div class="col-md-1">
+                    <img src="${app.img}"
+                        class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">${app.name}</h5>
+                        <p class="card-text">${app.description}</p>
+                        <div class="btn-group" role="group" aria-label="App links">
+                            ${Buttons}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+            })
+        }
+        setTimeout(() => {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", `applist.json`, false);
+            xmlHttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    globalThis.appsList = JSON.parse(this.responseText).apps;
+                    ProcessData()
+                }
+            };
+            xmlHttp.send(null);
+        }, 500)
     </script>
 </head>
 
@@ -33,66 +78,14 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="z-index: 2;">
         <form class="container-fluid">
             <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">App</span>
-              <input type="text" class="form-control" placeholder="App Name" aria-label="appname" aria-describedby="basic-addon1">
+                <span class="input-group-text" id="basic-addon1">App</span>
+                <input type="text" class="form-control" placeholder="App Name" aria-label="appname"
+                    aria-describedby="basic-addon1">
             </div>
-          </form>
+        </form>
     </nav>
     <div id="contentArea" class="contentArea">
-        <div class="card mb-3" style="max-width: 100%;">
-            <div class="row g-0">
-              <div class="col-md-1">
-                <img src="https://static.hillarys.co.uk/asset/media/9635/pure-white.jpg?width=1000&height=1000&mode=crop&cb=00010101000000&mcb=5f884e47a7424cfe86340315ccaafed0" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">App Name</h5>
-                  <p class="card-text">App Description</p>
-                  <div class="btn-group" role="group" aria-label="App links">
-                    <a href="aaa" type="button" class="btn btn-outline-success">App button link</a>
-                    <a href="aaa" type="button" class="btn btn-outline-success">another App button link</a>
-                    <a href="aaa" type="button" class="btn btn-outline-success">another App button link</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 100%;">
-            <div class="row g-0">
-              <div class="col-md-1">
-                <img src="https://static.hillarys.co.uk/asset/media/9635/pure-white.jpg?width=1000&height=1000&mode=crop&cb=00010101000000&mcb=5f884e47a7424cfe86340315ccaafed0" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">App Name</h5>
-                  <p class="card-text">App Description</p>
-                  <div class="btn-group" role="group" aria-label="App links">
-                    <a href="aaa" type="button" class="btn btn-outline-success">App button link</a>
-                    <a href="aaa" type="button" class="btn btn-outline-success">another App button link</a>
-                    <a href="aaa" type="button" class="btn btn-outline-success">another App button link</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 100%;">
-            <div class="row g-0">
-              <div class="col-md-1">
-                <img src="https://static.hillarys.co.uk/asset/media/9635/pure-white.jpg?width=1000&height=1000&mode=crop&cb=00010101000000&mcb=5f884e47a7424cfe86340315ccaafed0" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">App Name</h5>
-                  <p class="card-text">App Description</p>
-                  <div class="btn-group" role="group" aria-label="App links">
-                    <a href="aaa" type="button" class="btn btn-outline-success">App button link</a>
-                    <a href="aaa" type="button" class="btn btn-outline-success">another App button link</a>
-                    <a href="aaa" type="button" class="btn btn-outline-success">another App button link</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
