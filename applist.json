@@ -20,6 +20,13 @@
             "tags":["mod","mods","modding","modder","discord","official"],
             "img":"https://cdn.discordapp.com/splashes/1078696971088433153/233a516a27038fd2a51d9657165dd39f.jpg?size=480",
             "links":[{"name":"Intercept Games","src":"https://discord.gg/interceptgames"},{"name":"Modding Society","src":"https://discord.gg/ErStbyazSS"}]
+        },
+        {
+            "name":"Key bindings",
+            "description":"List of ksp2 key bindings",
+            "tags":["key","official"],
+            "img":"https://kerbal-forum-uploads.s3.us-west-2.amazonaws.com/monthly_2023_12/image.thumb.png.df62211a2e6cc0b4adc0cac85680d72a.png",
+            "links":[{"name":"Keys list","src":"https://forum.kerbalspaceprogram.com/topic/218360-ksp2-keybinds/"}]
         }
     ]
 }
