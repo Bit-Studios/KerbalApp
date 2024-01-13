@@ -27,6 +27,34 @@
             "tags":["key","official"],
             "img":"https://kerbal-forum-uploads.s3.us-west-2.amazonaws.com/monthly_2023_12/image.thumb.png.df62211a2e6cc0b4adc0cac85680d72a.png",
             "links":[{"name":"Keys list","src":"https://forum.kerbalspaceprogram.com/topic/218360-ksp2-keybinds/"}]
+        },
+        {
+            "name":"Knowledge Repository",
+            "description":"All the stuff we know about ksp2",
+            "tags":["knowledge","repository"],
+            "img":"https://i.imgur.com/eCoHcMZ.jpg",
+            "links":[{"name":"Knowledge Repository","src":"https://forum.kerbalspaceprogram.com/topic/199981-kerbal-space-program-2-knowledge-repository/"}]
+        },
+        {
+            "name":"SpaceDock ",
+            "description":"Mod listing site for space games",
+            "tags":["mod","mods","modding","modder","repository"],
+            "img":"https://spacedock.info/static/logo4.png",
+            "links":[{"name":"KSP2 SpaceDock ","src":"https://spacedock.info/kerbal-space-program-2"}]
+        },
+        {
+            "name":"Resonant Orbit Calculator",
+            "description":"Calculate the resonant orbit needed for a carrier craft to inject craft it carries, like satellites, into equidistant positions of a shared circular orbit. This is useful for setting up things like CommNet constellations. The “Injection Δv” value is the delta-v required to move from the resonant orbit to the final (circular) orbit.",
+            "tags":["orbit","calculator","resonant"],
+            "img":"http://meyerweb.com/eric/ksp/resonant-orbits/screenshot.png",
+            "links":[{"name":"Calculator","src":"https://meyerweb.com/eric/ksp/resonant-orbits/"}]
+        },
+        {
+            "name":"KSP2 mod releases",
+            "description":"This is where the new stuff comes in, be sure to check the first posts regularly for updates!",
+            "tags":["mod","mods","modding","modder","repository"],
+            "img":"https://forum.kerbalspaceprogram.com/uploads/set_resources_31/84c1e40ea0e759e3f1505eb1788ddf3c_default_photo.png",
+            "links":[{"name":"Forums","src":"https://forum.kerbalspaceprogram.com/forum/130-ksp2-mod-releases/"}]
         }
     ]
 }
