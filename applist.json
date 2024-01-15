@@ -62,6 +62,13 @@
             "tags":["calculator","dv"],
             "img":"https://suppise-dv-calculator.com/images/general/banner.png",
             "links":[{"name":"Calculator","src":"https://suppise-dv-calculator.com/"}]
+        },
+        {
+            "name":"KSP builds",
+            "description":"This site hosts json copyable craft files",
+            "tags":["build","craft","json","builds"],
+            "img":"https://kspbuilds.com/static/media/logo_light_full.e37991aaafb07fcd16c3.png",
+            "links":[{"name":"KSP builds","src":"https://kspbuilds.com/"}]
         }
     ]
 }
