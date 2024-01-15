@@ -59,18 +59,18 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
                     var hastag = false
                     app.tags.forEach(tag => {
                         if (filterValue.startsWith("-")) {
-                            if (tag == filterValue.replace("-", "")) {
+                            if (tag.toLowerCase() == filterValue.replace("-", "").toLowerCase()) {
                                 hasNeg = true;
 
                             }
                         }
                         else {
-                            if (tag == filterValue) {
+                            if (tag.toLowerCase() == filterValue.toLowerCase()) {
                                 showapp = true;
                                 hastag = true;
                             }
                         }
-                        if (app.name.includes(filterValue)) {
+                        if (app.name.toLowerCase().includes(filterValue.toLowerCase())) {
                             showapp = true;
                             hastag = true;
                         }
