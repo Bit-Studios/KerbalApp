@@ -28,20 +28,79 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
     </style>
     <script type="module">
         globalThis.appsList = [{
-            "name":"example",
-            "description":"example",
-            "tags":["example"],
-            "img":"https://static.hillarys.co.uk/asset/media/9635/pure-white.jpg?width=1000&height=1000",
-            "links":[{"name":"example","src":"https://example.com"}]
+            "name": "example",
+            "description": "example",
+            "tags": ["example"],
+            "img": "https://static.hillarys.co.uk/asset/media/9635/pure-white.jpg?width=1000&height=1000",
+            "links": [{ "name": "example", "src": "https://example.com" }]
         }]
-        function ProcessData(){
-            globalThis.appsList.forEach(app =>{
+        globalThis.filteredappsList = [{
+            "name": "example",
+            "description": "example",
+            "tags": ["example"],
+            "img": "https://static.hillarys.co.uk/asset/media/9635/pure-white.jpg?width=1000&height=1000",
+            "links": [{ "name": "example", "src": "https://example.com" }]
+        }]
+        globalThis.updateResults = function () {
+            contentArea.innerHTML = ""
+            globalThis.filteredappsList = []
+            var filterEl = document.getElementById("filterText")
+            let filterText = [""]
+            filterText = filterEl.value.split(" ")
+            globalThis.appsList.forEach(app => {
+                var showapp = false
+                var hasNeg = false;
+                var hasalltags = true;
+                if (filterEl.value.length <= 0) {
+                    showapp = true
+                    hasalltags = true
+                }
+                filterText.forEach(filterValue => {
+                    var hastag = false
+                    app.tags.forEach(tag => {
+                        if (filterValue.startsWith("-")) {
+                            if (tag == filterValue.replace("-", "")) {
+                                hasNeg = true;
+
+                            }
+                        }
+                        else {
+                            if (tag == filterValue) {
+                                showapp = true;
+                                hastag = true;
+                            }
+                        }
+                        if (app.name.includes(filterValue)) {
+                            showapp = true;
+                            hastag = true;
+                        }
+
+                    })
+                    
+
+                    if (hastag && hasalltags) {
+                        hasalltags = true;
+                    } else {
+                        hasalltags = false
+                    }
+                })
+
+
+
+                if (hasNeg) {
+                    showapp = false;
+                }
+                if (showapp && hasalltags) {
+                    filteredappsList.push(app)
+                }
+            })
+            globalThis.filteredappsList.forEach(app => {
                 var Buttons = ""
-                app.links.forEach(link =>{
+                app.links.forEach(link => {
                     Buttons = `${Buttons} <a href="${link.src}" type="button" class="btn btn-outline-success">${link.name}</a>`
                 })
                 var contentArea = document.getElementById("contentArea");
-                contentArea.innerHTML =  `${contentArea.innerHTML}<div class="card mb-3" style="max-width: 100%;">
+                contentArea.innerHTML = `${contentArea.innerHTML}<div class="card mb-3" style="max-width: 100%;">
             <div class="row g-0">
                 <div class="col-md-1">
                     <img src="${app.img}"
@@ -66,7 +125,7 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
             xmlHttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     globalThis.appsList = JSON.parse(this.responseText).apps;
-                    ProcessData()
+                    globalThis.updateResults()
                 }
             };
             xmlHttp.send(null);
@@ -79,13 +138,13 @@ https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
         <form class="container-fluid">
             <div class="input-group">
                 <span class="input-group-text" id="basic-addon1">App</span>
-                <input type="text" class="form-control" placeholder="App Name" aria-label="appname"
-                    aria-describedby="basic-addon1">
+                <input type="text" id="filterText" class="form-control" placeholder="App Name" aria-label="appname"
+                    aria-describedby="basic-addon1" onkeypress="globalThis.updateResults()">
             </div>
         </form>
     </nav>
     <div id="contentArea" class="contentArea">
-        
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
