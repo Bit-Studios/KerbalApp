@@ -1,6 +1,13 @@
 {
     "apps":[
         {
+            "name":"The Forums",
+            "description":"The official ksp2 forums",
+            "tags":["forums","forum","ksp","ksp2","mod","mods","modding","modder","repository"],
+            "img":"https://forum.kerbalspaceprogram.com/uploads/set_resources_31/84c1e40ea0e759e3f1505eb1788ddf3c_default_photo.png",
+            "links":[{"name":"KSP2 forums","src":"https://forum.kerbalspaceprogram.com/forum/108-kerbal-space-program-2/"},{"name":"Report bug","src":"https://forum.kerbalspaceprogram.com/forms/2-ksp2br/"},{"name":"KSP2 Bug Reports","src":"https://forum.kerbalspaceprogram.com/forum/144-ksp2-bug-reports/"},{"name":"KSP2 Suggestions","src":"https://forum.kerbalspaceprogram.com/forum/120-ksp2-suggestions-and-development-discussion/"},{"name":"KSP2 Discussion","src":"https://forum.kerbalspaceprogram.com/forum/119-ksp2-discussion/"},{"name":"Mod Releases","src":"https://forum.kerbalspaceprogram.com/forum/130-ksp2-mod-releases/"}]
+        },
+        {
             "name":"CKAN",
             "description":"CKAN is a metadata repository and associated tools to allow you to find, install, and manage mods for Kerbal Space Program. It provides strong assurances that mods are installed in the way prescribed by their metadata files, for the correct version of Kerbal Space Program, alongside their dependencies, and without any conflicting mods.",
             "tags":["ckan","mod","mods","modding","install","installer","modder"],
@@ -62,13 +69,6 @@
             "tags":["build","craft","json","builds"],
             "img":"https://kspbuilds.com/static/media/logo_light_full.e37991aaafb07fcd16c3.png",
             "links":[{"name":"KSP builds","src":"https://kspbuilds.com/"}]
-        },
-        {
-            "name":"The Forums",
-            "description":"The official ksp2 forums",
-            "tags":["forums","forum","ksp","ksp2","mod","mods","modding","modder","repository"],
-            "img":"https://forum.kerbalspaceprogram.com/uploads/set_resources_31/84c1e40ea0e759e3f1505eb1788ddf3c_default_photo.png",
-            "links":[{"name":"KSP2 forums","src":"https://forum.kerbalspaceprogram.com/forum/108-kerbal-space-program-2/"},{"name":"Report bug","src":"https://forum.kerbalspaceprogram.com/forms/2-ksp2br/"},{"name":"KSP2 Bug Reports","src":"https://forum.kerbalspaceprogram.com/forum/144-ksp2-bug-reports/"},{"name":"KSP2 Suggestions","src":"https://forum.kerbalspaceprogram.com/forum/120-ksp2-suggestions-and-development-discussion/"},{"name":"KSP2 Discussion","src":"https://forum.kerbalspaceprogram.com/forum/119-ksp2-discussion/"},{"name":"Mod Releases","src":"https://forum.kerbalspaceprogram.com/forum/130-ksp2-mod-releases/"}]
         },
         {
             "name":"Kerbin - Astronomisches Rechen-Institut",
