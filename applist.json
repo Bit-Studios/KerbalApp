@@ -50,13 +50,6 @@
             "links":[{"name":"Calculator","src":"https://meyerweb.com/eric/ksp/resonant-orbits/"}]
         },
         {
-            "name":"KSP2 mod releases",
-            "description":"This is where the new stuff comes in, be sure to check the first posts regularly for updates!",
-            "tags":["mod","mods","modding","modder","repository"],
-            "img":"https://forum.kerbalspaceprogram.com/uploads/set_resources_31/84c1e40ea0e759e3f1505eb1788ddf3c_default_photo.png",
-            "links":[{"name":"Forums","src":"https://forum.kerbalspaceprogram.com/forum/130-ksp2-mod-releases/"}]
-        },
-        {
             "name":"Dv calculator",
             "description":"This is an interactive ΔV map. Simply click on a node on a branch to determine the target planet, and how you would like to explore it. Toggle the checkboxes to tweak the calculations to your mission parameters, and watch the required ΔV values as well as the relevant transfer angles be displayed in real time.",
             "tags":["calculator","dv"],
@@ -69,6 +62,20 @@
             "tags":["build","craft","json","builds"],
             "img":"https://kspbuilds.com/static/media/logo_light_full.e37991aaafb07fcd16c3.png",
             "links":[{"name":"KSP builds","src":"https://kspbuilds.com/"}]
+        },
+        {
+            "name":"The Forums",
+            "description":"The official ksp2 forums",
+            "tags":["forums","forum","ksp","ksp2","mod","mods","modding","modder","repository"],
+            "img":"https://forum.kerbalspaceprogram.com/uploads/set_resources_31/84c1e40ea0e759e3f1505eb1788ddf3c_default_photo.png",
+            "links":[{"name":"KSP2 forums","src":"https://forum.kerbalspaceprogram.com/forum/108-kerbal-space-program-2/"},{"name":"Report bug","src":"https://forum.kerbalspaceprogram.com/forms/2-ksp2br/"},{"name":"KSP2 Bug Reports","src":"https://forum.kerbalspaceprogram.com/forum/144-ksp2-bug-reports/"},{"name":"KSP2 Suggestions","src":"https://forum.kerbalspaceprogram.com/forum/120-ksp2-suggestions-and-development-discussion/"},{"name":"KSP2 Discussion","src":"https://forum.kerbalspaceprogram.com/forum/119-ksp2-discussion/"},{"name":"Mod Releases","src":"https://forum.kerbalspaceprogram.com/forum/130-ksp2-mod-releases/"}]
+        },
+        {
+            "name":"Kerbin - Astronomisches Rechen-Institut",
+            "description":"Calculations since someone invented numbers!",
+            "tags":["orbit","calculator","commnet","geosynchron","german"],
+            "img":"http://kerbin-aci.monsterbenny.de/img/observatory.svg",
+            "links":[{"name":"home","src":"http://kerbin-aci.monsterbenny.de/index.html"},{"name":"geosynchron verschieber","src":"http://kerbin-aci.monsterbenny.de/geosynchron-verschieber.html"},{"name":"commnet satellitenverteiler","src":"http://kerbin-aci.monsterbenny.de/commnet-satellitenverteiler.html"}]
         }
     ]
 }
